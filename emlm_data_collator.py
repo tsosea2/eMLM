@@ -4,15 +4,14 @@ import random
 import warnings
 from dataclasses import dataclass
 
-from transformers import DataCollatorForLanguageModeling
-from transformers.tokenization_utils_base import BatchEncoding, PreTrainedTokenizerBase
-
 import torch
 from torch.nn.utils.rnn import pad_sequence
 
 from transformers.file_utils import PaddingStrategy
 from transformers.modeling_utils import PreTrainedModel
 from transformers.models.bert import BertTokenizer, BertTokenizerFast
+from transformers import DataCollatorForLanguageModeling
+from transformers.tokenization_utils_base import BatchEncoding, PreTrainedTokenizerBase
 
 import math
 
