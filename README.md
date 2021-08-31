@@ -32,6 +32,4 @@ If you use the model in your research, please consider citing out paper:
 conda create --name EMLM python=3.8
 pip install -r requirements.txt
 python emlm.py --checkpoint_file <checkpoint_dir> --batch_size <batch_size> --emolex_path <emolex_path> --from_scratch <1/0> --k 0.5
-
-
 ```
