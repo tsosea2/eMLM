@@ -25,7 +25,7 @@ parser.add_argument("--emolex_path", type=str)
 parser.add_argument("--from_scratch", type=int)
 parser.add_argument("--k", type=float)
 parser.add_argument("--testing_epochs", type=int)
-parser.add_argument("--max_seq_length", type=int, default=512, help="Default 512")
+parser.add_argument("--max_seq_length", type=int, default=512, help="Max number of tokens in sequence")
 
 word_key = 'English (en)'
 emotions = [
