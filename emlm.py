@@ -1,31 +1,22 @@
 from typing import final
 from datasets import load_dataset
 from sklearn.utils import shuffle
+import nltk.data
+import pandas as pd
+from tqdm import tqdm
+import os
+import argparse
+
+import torch
 from torch.utils import data
+from torch.utils.data import Dataset, DataLoader
+
 from transformers import AutoTokenizer, BertForMaskedLM, DataCollatorForWholeWordMask, DataCollatorForLanguageModeling
 from transformers.models.bert.configuration_bert import BertConfig
 from transformers.utils.dummy_pt_objects import AutoModel
-
-from emlm_data_collator import DataCollatorForEMLM
-
-from torch.utils.data import Dataset, DataLoader
-
 from datasets import interleave_datasets
 
-import torch
-
-import nltk.data
-
-import pandas as pd
-
-from tqdm import tqdm
-
-import os
-
-from sst2 import give_performance_sst
-from goemotions import give_performance_goemotions
-
-import argparse
+from emlm_data_collator import DataCollatorForEMLM
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--checkpoint_file", type=str)
