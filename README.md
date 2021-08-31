@@ -25,3 +25,13 @@ If you use the model in your research, please consider citing out paper:
     abstract = "BERT has been shown to be extremely effective on a wide variety of natural language processing tasks, including sentiment analysis and emotion detection. However, the proposed pretraining objectives of BERT do not induce any sentiment or emotion-specific biases into the model. In this paper, we present Emotion Masked Language Modelling, a variation of Masked Language Modelling aimed at improving the BERT language representation model for emotion detection and sentiment analysis tasks. Using the same pre-training corpora as the original model, Wikipedia and BookCorpus, our BERT variation manages to improve the downstream performance on 4 tasks from emotion detection and sentiment analysis by an average of 1.2{\%} F-1. Moreover, our approach shows an increased performance in our task-specific robustness tests.",
 }
 ```
+
+## Training using eMLM
+
+```
+conda create --name EMLM python=3.8
+pip install -r requirements.txt
+python emlm.py --checkpoint_file <checkpoint_dir> --batch_size <batch_size> --emolex_path <emolex_path> --from_scratch <1/0> --k 0.5
+
+
+```
