@@ -133,7 +133,7 @@ def main():
                 print('*****Evaluating*****')
                 # Save model to free up space for downstream training
                 bert_model.save_pretrained(args.checkpoint_file)
-
+                torch.save(optimizer.state_dict(), "optimizer_state_dict")
                 # ----- You can train on downstream tasks here to see how the 
                 # model behaves -----
 
@@ -144,7 +144,7 @@ def main():
                                              lr=1e-4,
                                              weight_decay=0.01,
                                              betas=[0.9, 0.999])
-
+                optimizer.load_state_dict(torch.load("optimizer_state_dict"))
             tokenized = bert_tokenizer(elem)["input_ids"]
             inp = data_collator(tokenized)
 
