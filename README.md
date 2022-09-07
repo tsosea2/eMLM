@@ -1,5 +1,5 @@
 # eMLM
-Code and Pre-trained models for our ACL 2021 paper entitled: "eMLM: A New Pre-training Objective for Emotion Related Tasks" (https://aclanthology.org/2021.acl-short.38/). The pretrained BERT embeddings are available at https://drive.google.com/file/d/1ZXJ_FQmUpYtLwu6j3-XNZXGewYlABtAg/view?usp=sharing. A colab that uses the EMLM-pre-trained BERT to train a model on GoEmotions can be found at https://colab.research.google.com/drive/1jUAeuPh4-NmmA3LiQIdJwPwZQqSW2UvN?usp=sharing. The Colab assumes that the pre-trained model resides in your root Google Drive directory.
+Code and Pre-trained models for our ACL 2021 paper entitled: "eMLM: A New Pre-training Objective for Emotion Related Tasks" (https://aclanthology.org/2021.acl-short.38/). The pretrained BERT embeddings are available at https://uofi.box.com/s/id4ll9lo10owisoshf7sc2fglxigilrc. A colab that uses the EMLM-pre-trained BERT to train a model on GoEmotions can be found at https://colab.research.google.com/drive/1jUAeuPh4-NmmA3LiQIdJwPwZQqSW2UvN?usp=sharing. The Colab assumes that the pre-trained model resides in your root Google Drive directory.
 
 ## Implementation
 
